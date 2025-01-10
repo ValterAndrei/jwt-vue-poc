@@ -1,11 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import MainHeader from "./components/MainHeader.vue";
+</script>
 
 <template>
-  <div>
-    <header>
-      <RouterLink to="/"> JWT-POC </RouterLink>
-    </header>
+  <MainHeader />
 
-    <RouterView />
-  </div>
+  <RouterView />
 </template>
