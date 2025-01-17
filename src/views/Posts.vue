@@ -53,7 +53,7 @@ async function createPost() {
     class="max-w-screen-xl px-4 mx-auto py-5 posts-layout max-lg:flex max-lg:flex-col lg:grid gap-8"
   >
     <form
-      class="[grid-area:aside] lg:self-start sticky top-4"
+      class="[grid-area:aside] lg:self-start lg:sticky lg:top-4"
       @submit.prevent="createPost"
     >
       <h2 class="text-3xl mb-4">Add new post</h2>
@@ -90,22 +90,24 @@ async function createPost() {
         />
       </div>
 
-      <button
-        type="submit"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:opacity-50"
-        :disabled="loading || creating"
-      >
-        Add post
-      </button>
+      <div class="flex flex-wrap gap-2">
+        <button
+          type="submit"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:opacity-50"
+          :disabled="loading || creating"
+        >
+          Add post
+        </button>
 
       <button
-        type="button"
-        class="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:opacity-50"
-        :disabled="loading || creating"
-        @click="authToken.value = '123123123123'"
-      >
-        Test breaking token
-      </button>
+          type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:opacity-50"
+          :disabled="loading || creating"
+          @click="authToken.value = '123123123123'"
+        >
+          Test breaking token
+        </button>
+      </div>
     </form>
 
     <div
