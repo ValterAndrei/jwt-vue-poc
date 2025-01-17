@@ -22,6 +22,7 @@ async function handleSubmit() {
     router.push({ name: "dashboard" });
     //
   } catch (error) {
+    // @ts-ignore
     console.error(error.response);
     //
   } finally {

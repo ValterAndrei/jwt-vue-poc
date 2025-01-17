@@ -39,6 +39,7 @@ async function handleSubmit() {
 
     //
   } catch (error) {
+    // @ts-ignore
     console.error(error.response);
     //
   } finally {
