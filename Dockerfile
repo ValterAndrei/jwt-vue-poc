@@ -16,9 +16,9 @@ RUN npm install --frozen-lockfile
 # Copia o restante dos arquivos para dentro do container
 COPY . .
 
-# Define a porta usada pelo Vite (padrão: 5173)
-ENV PORT=5173
-EXPOSE 5173
+# Define a porta usada pelo Vite (padrão: 4000)
+ENV PORT=4000
+EXPOSE 4000
 
 # Comando para rodar o servidor de desenvolvimento
 CMD ["npm", "run", "dev", "--", "--host"]
