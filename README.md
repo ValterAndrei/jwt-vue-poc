@@ -9,15 +9,15 @@ Versão do node recomendada: ^20
 
 - Construir a imagem
 ```shell
-docker-compose build app
+docker compose build app
 ```
 
 - Subir o container
 ```shell
-docker-compose up
+docker compose up
 ```
 
 - Acessar o container
 ```shell
-docker-compose run --rm app sh
+docker compose run --rm app sh
 ```
