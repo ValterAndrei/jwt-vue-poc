@@ -3,7 +3,7 @@ name: Deploy para S3
 on:
   push:
     branches:
-      - _main
+      - _master
 
 jobs:
   build-and-deploy:
